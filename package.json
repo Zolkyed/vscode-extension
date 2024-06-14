@@ -4,6 +4,7 @@
   "description": "copy file contents with filename",
   "version": "0.0.1",
   "author": "haeyeon",
+  "publisher": "haeyeon",
   "engines": {
     "vscode": "^1.84.2"
   },
