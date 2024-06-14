@@ -1,26 +1,42 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+  // 파일명과 함께 복사하는 동작 실행
+  let copyWithFilenameInMenu = vscode.commands.registerCommand(
+    "copy-with-filename.copy-with-filename",
+    (uri: vscode.Uri) => {
+      // 파일 경로 데이터가 있는지 확인함
+      if (uri && uri.fsPath) {
+        // 프로젝트 기준 파일의 상대경로를 들고옴
+        const filename = vscode.workspace.asRelativePath(uri.fsPath);
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "copy-with-filename" is now active!');
+        // 파일의 내용을 들고오기 위해 에디터를 이용함
+        const editor = vscode.window.activeTextEditor;
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('copy-with-filename.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from copy-with-filename!');
-	});
+        if (editor) {
+          // 파일내용을 가져옴
+          let documentText = editor.document.getText();
 
-	context.subscriptions.push(disposable);
+          if (documentText) {
+            // 파일내용 최상단에 파일경로를 추가함
+            const documentTextWithFilename = `//${filename} \n ${documentText}`;
+
+            // 파일명이 포함된 파일내용 복사
+            vscode.env.clipboard
+              .writeText(documentTextWithFilename)
+              .then(() => {
+                vscode.window.showInformationMessage(
+                  `Copied file name: ${filename}`
+                );
+              });
+          }
+        }
+      } else {
+        vscode.window.showInformationMessage("No file selected");
+      }
+    }
+  );
+
+  // copyWithFilenameInMenu 구독
+  context.subscriptions.push(copyWithFilenameInMenu);
 }
-
-// This method is called when your extension is deactivated
-export function deactivate() {}
