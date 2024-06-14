@@ -3,6 +3,7 @@
   "displayName": "copy-with-filename",
   "description": "",
   "version": "0.0.1",
+  "author": "haeyeon",
   "engines": {
     "vscode": "^1.84.2"
   },
