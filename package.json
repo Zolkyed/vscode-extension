@@ -25,7 +25,14 @@
           "group": "navigation"
         }
       ]
-    }
+    },
+    "keybindings": [
+      {
+        "command": "copy-with-filename.copy-with-filename",
+        "key": "ctrl+alt+c",
+        "when": "editorTextFocus"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
