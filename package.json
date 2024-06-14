@@ -1,7 +1,7 @@
 {
   "name": "copy-with-filename",
   "displayName": "copy-with-filename",
-  "description": "",
+  "description": "copy file contents with filename",
   "version": "0.0.1",
   "author": "haeyeon",
   "engines": {
