@@ -1,5 +1,4 @@
-# copy-with-filename README
-
+# copy-with-filename
 A tool that automatically adds a filename(file path) when copying the contents of a file.
 
 ## Features
