@@ -46,7 +46,7 @@
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.2
 
 **Enjoy!**
 
@@ -101,6 +101,6 @@ None at the moment. If you encounter any issues, please report them in the issue
 
 ## Release Notes
 
-### 0.0.1
+### 0.0.2
 
 **Enjoy!**

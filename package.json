@@ -2,7 +2,7 @@
   "name": "copy-with-filename",
   "displayName": "copy-with-filename",
   "description": "copy file contents with filename",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "haeyeon",
   "publisher": "haeyeon",
   "engines": {
