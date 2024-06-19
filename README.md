@@ -1,11 +1,15 @@
 # copy-with-filename
+
 파일 내용을 복사할 때 자동으로 파일명을 추가해주는 도구입니다.
 
 ## 기능
 
 - navigation에서 파일명을 우클릭하면 나타나는 보조 메뉴를 통해 파일내용과 파일명을 복사합니다.
 - 키보드 단축키를 통해 파일내용과 파일명을 복사합니다.
-  
+- 지원하는 파일 확장자
+
+  > js, ts, java, jsx, tsx, c, cpp, cs, php, jsp, html, xml, md, css, asp, yml, yaml, sh, phtyon
+
 ## 사용법
 
 복사를 위한 두 가지 방법을 제공합니다.
@@ -14,13 +18,13 @@
 
 1. 폴더(Explore view)에서 복사할 파일을 우클릭
 2. 후 `Copy File Name` 선택
-3. 붙여넣기 시 파일내용 최상단에 파일명이 추가되는것을 확인 
+3. 붙여넣기 시 파일내용 최상단에 파일명이 추가되는것을 확인
 
 ### 단축키
 
 1. 복사할 파일을 open
 2. `Ctrl`+`Alt`+`C`누르면 파일 복사됨
-3. 붙여넣기 시 파일내용 최상단에 파일명이 추가되는것을 확인 
+3. 붙여넣기 시 파일내용 최상단에 파일명이 추가되는것을 확인
 
 ## 요구사항
 
@@ -46,17 +50,19 @@
 
 **Enjoy!**
 
-
-
 ---
 
 # copy-with-filename
+
 A tool that automatically adds a filename(file path) when copying the contents of a file.
 
 ## Features
 
 - Copies files with filenames through a secondary menu that appears when you right-click a file in the navigation
 - Copy files with filename through keyboard shortcut while file is open
+- Supported file type
+
+  > js, ts, java, jsx, tsx, c, cpp, cs, php, jsp, html, xml, md, css, asp, yml, yaml, sh, phtyon
 
 ## Usage
 
@@ -81,7 +87,7 @@ None. This extension works out of the box with any VS Code installation.
 
 ## Installation
 
-1. Open the Extensions view in VS Code (`Ctrl+Shift+X`).
+1. Open the Extensions view in VS Code (`Ctrl`+`Shift`+`X`).
 2. Search for "Copy With Filename".
 3. Click "Install".
 
