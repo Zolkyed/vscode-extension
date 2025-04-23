@@ -32,7 +32,7 @@
     "keybindings": [
       {
         "command": "copy-with-filename.copy-with-filename",
-        "key": "ctrl+alt+c",
+        "key": "alt+c",
         "when": "editorTextFocus"
       }
     ]
